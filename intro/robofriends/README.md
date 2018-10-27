@@ -23,3 +23,7 @@ yarn test
 # Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!
 yarn eject
 ```
+
+### What is in the directory?
+
+There are many files in the directory created by the package. At this point the files you should have a look now are `index.html` and `index.js`. They contain the most relevant code to start the  web app. Have a look at them and play around to make sure you understand what is going on.
