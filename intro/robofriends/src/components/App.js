@@ -8,7 +8,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      robots: robots,
+      robots: [],
       searchField: '',
     };
   }
@@ -29,6 +29,12 @@ class App extends Component {
         <CardList elements={ filteredRobots } />
       </div>
     );
+  }
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(users => this.setState({ robots: users }));
   }
 }
 
