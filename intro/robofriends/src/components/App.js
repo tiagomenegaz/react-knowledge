@@ -22,13 +22,22 @@ class App extends Component {
       return robot.name.toLowerCase().includes(this.state.searchField.toLowerCase());
     });
 
-    return (
-      <div className='tc'>
-        <h1>Robofriends</h1>
-        <SearchBox searchChange={ this.onSearchChange } />
-        <CardList elements={ filteredRobots } />
-      </div>
-    );
+    if (this.state.robots.length === 0) {
+      return (
+        <div className='tc'>
+          <h1>Robofriends</h1>
+        </div>
+      );
+    } else {
+      return (
+        <div className='tc'>
+          <h1>Robofriends</h1>
+          <SearchBox searchChange={ this.onSearchChange } />
+          <CardList elements={ filteredRobots } />
+        </div>
+      );
+    }
+
   }
 
   componentDidMount() {
