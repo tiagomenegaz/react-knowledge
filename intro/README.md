@@ -17,3 +17,28 @@ Data flows top to bottom. In a component structure there are parent and children
 ### Virtual DOM
 
 React creates an abstraction to interact to the actual browser's DOM.
+
+### Props
+
+### State
+
+### Children
+
+### Life Cycle
+
+Like VueJs, React also has a life cycle.
+
+```
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+```
+
+### Components
+
+Components are the reusable templates that do not present any life cycle
+
+### Containers
+
+Containers are smart components that have state, life cycle hooks and class syntax
